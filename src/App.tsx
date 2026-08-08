@@ -4,14 +4,14 @@ import { Cpu, Terminal, Layers, Palette } from "lucide-react";
 export default function App() {
   return (
     <div style={{ position: "relative", minHeight: "100vh", background: "var(--color-bg-000)", color: "var(--color-text-primary)", overflow: "hidden" }}>
-      {/* Scanline overlay for cinematic phonk vibe */}
+      {/* Scanline overlay */}
       <div className="scanlines" />
 
-      {/* Ambient Red Glow in Background */}
+      {/* Ambient background glows */}
       <div className="ambient-red-glow" style={{ top: "-10%", left: "-10%", opacity: 0.6 }} />
       <div className="ambient-red-glow" style={{ bottom: "-20%", right: "-10%", opacity: 0.4 }} />
 
-      {/* 1. Header/Navigation */}
+      {/* Navigation bar */}
       <motion.nav 
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -29,7 +29,7 @@ export default function App() {
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", maxWidth: "1400px", margin: "0 auto" }}>
-          {/* Logo */}
+          {/* Logo branding */}
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <Cpu size={22} color="var(--color-red-neon)" style={{ filter: "drop-shadow(0 0 5px var(--color-red-primary))" }} />
             <span style={{ 
@@ -43,7 +43,7 @@ export default function App() {
             </span>
           </div>
 
-          {/* Badge */}
+          {/* Status badge */}
           <div style={{ 
             fontSize: "10px", 
             fontFamily: "var(--font-heading)", 
@@ -61,7 +61,7 @@ export default function App() {
         </div>
       </motion.nav>
 
-      {/* 2. Hero Section */}
+      {/* Hero section */}
       <section style={{ 
         minHeight: "100vh", 
         padding: "160px 5% 80px", 
@@ -74,7 +74,7 @@ export default function App() {
       }}>
         <div style={{ maxWidth: "1200px", width: "100%" }}>
           
-          {/* Tagline */}
+          {/* Sub-headline / Tagline */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,10 +93,10 @@ export default function App() {
             }}
           >
             <Palette size={14} color="var(--color-red-neon)" />
-            Brand & CSS Design System Scaffolded
+            Brand & CSS Design System
           </motion.div>
 
-          {/* Massive Typography */}
+          {/* Headline */}
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ export default function App() {
             Establishing the high-contrast aesthetic. Deep blacks, glowing red barriers, scanlines, and typographic scale tailored for predictive retail intelligence.
           </motion.p>
 
-          {/* Glowing divider line */}
+          {/* Glowing divider */}
           <motion.div 
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
@@ -140,7 +140,7 @@ export default function App() {
             className="glowing-divider" 
           />
 
-          {/* Grid Layout of Design Tokens */}
+          {/* Design system tokens layout */}
           <motion.div 
             initial="hidden"
             animate="visible"
@@ -158,7 +158,7 @@ export default function App() {
               marginTop: "50px" 
             }}
           >
-            {/* Color Swatch Card */}
+            {/* Color swatches card */}
             <motion.div 
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -203,7 +203,7 @@ export default function App() {
               </div>
             </motion.div>
 
-            {/* Typography Card */}
+            {/* Typography spec card */}
             <motion.div 
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -230,7 +230,7 @@ export default function App() {
               </div>
             </motion.div>
 
-            {/* Visual Classes Card */}
+            {/* Visual utilities card */}
             <motion.div 
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -264,7 +264,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Neon grid overlay */}
+      {/* Grid overlay */}
       <div className="neon-grid" style={{ opacity: 0.15 }} />
     </div>
   );
